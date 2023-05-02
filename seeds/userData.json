@@ -1,27 +1,42 @@
 [
     {
-        "id": 1,
 	    "username": "ghosttracker13",
 	    "password": "pass12345"
     },
     {
-        "id": 2,
 	    "username": "ghosttracker24",
 	    "password": "pass12345"
     },
     {
-        "id": 3,
 	    "username": "ghosttracker76",
 	    "password": "pass12345"
     },
     {
-        "id": 4,
 	    "username": "ghosttracker88",
 	    "password": "pass12345"
     },
     {
-        "id": 5,
 	    "username": "ghosttracker95",
+	    "password": "pass12345"
+    },
+    {
+	    "username": "ghosthunter83",
+	    "password": "pass12345"
+    },
+    {
+	    "username": "ghosthunter75",
+	    "password": "pass12345"
+    },
+    {
+	    "username": "ghosthunter54",
+	    "password": "pass12345"
+    },
+    {
+	    "username": "ghostwatcher44",
+	    "password": "pass12345"
+    },
+    {
+	    "username": "ghosttracker13",
 	    "password": "pass12345"
     }
 ]
