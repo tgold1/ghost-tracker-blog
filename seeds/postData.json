@@ -6,6 +6,37 @@
         "description": "Moon River Brewing Company, the building is said to be haunted by angry spirits. Among them is a lady in white and James Stark, a known gambler who was killed in the building in an altercation.",
         "date_created": "5/01/2023",
         "user_id": 1
-
+    },
+    {
+        "id": 2,
+        "city": "Aspen",
+        "state": "Colorado",
+        "description": "Pioneer Park, haunted by the ghost of Harriet Webber, wife of the builder of the park."
+        "date_created": "5/01/2023",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "description": "Monte Vista Hotel, a phantom bellboy is said to knock on the door of room 210 and announce room service.",
+        "date_created": "5/01/2023",
+        "user_id": 3
+    },
+    {
+        "id": 4,
+        "city": "Oxnard",
+        "state": "California",
+        "description": "Henry Levy House, the house is filmed with a locked door flying open and is believed to be the ghosts of previous owners Henry and Camille Levy who died in the house.",
+        "date_created": "5/01/2023",
+        "user_id": 4
+    },
+    {
+        "id": 5,
+        "city": "St. Augustine",
+        "state": "Florida",
+        "description": "Pedro Benedit Horruytiner house, the ghost of Pedro Benedit and a cat who once lived there haunt the house.",
+        "date_created": "5/01/2023",
+        "user_id": 5
     }
 ]
