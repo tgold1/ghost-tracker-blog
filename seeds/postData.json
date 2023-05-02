@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+	    "city": "Savannah",
+	    "state": "Georgia",
+        "description": "Moon River Brewing Company, the building is said to be haunted by angry spirits. Among them is a lady in white and James Stark, a known gambler who was killed in the building in an altercation.",
+        "date_created": "5/01/2023",
+        "user_id": 1
+
+    }
+]
