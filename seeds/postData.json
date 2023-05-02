@@ -38,5 +38,48 @@
         "description": "Pedro Benedit Horruytiner house, the ghost of Pedro Benedit and a cat who once lived there haunt the house.",
         "date_created": "5/01/2023",
         "user_id": 5
+    },
+    {
+        "id": 6,
+        "city": "Chicago",
+        "state": "Illinois",
+        "description": "Hull House, the wife of Charles Hull the original owner is said to haunt the attic of the house.",
+        "date_created": "5/01/2023",
+        "user_id": 6
+    },
+    {
+        "id": 7,
+        "city": "Cumberland",
+        "state": "Maryland",
+        "description": "Chesapeake and Ohio Canal, haunted by the ghosts of soldiers who fought in the Civil War.", 
+        "date_created": "5/01/2023",
+        "user_id": 7
+    },
+    {
+        "id": 8,
+        "city": "Marquette",
+        "state": "Michigan",
+        "description": "Landmark Inn, a room is haunted by a librarian who lost her lover in a shipwreck.", 
+        "date_created": "5/01/2023",
+        "user_id": 8
+    },
+    {
+        "id": 9,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "description": "1st Avenue, haunted by a woman who died during World War II.",
+        "date_created": "5/01/2023",
+        "user_id": 9
+    },
+    {
+        "id": 10,
+        "city": "Cape May",
+        "state": "NJ",
+        "description": "Emlen Physick Estate, haunted by the original owner and his family.",
+        "date_created": "5/01/2023",
+        "user_id": 10
+    },
+    {
+        
     }
 ]
