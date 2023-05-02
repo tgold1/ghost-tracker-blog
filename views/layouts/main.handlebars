@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghost Tracker</title>
     <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
+    {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
 </head>
 
 <body>
@@ -14,21 +14,18 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Ghost Tracker</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">New Post</a>
-                        <a class="nav-item nav-link" href="#">Login</a>
+                        <a class="nav-item nav-link active" href="/homepage">Home <span class="sr-only"></span></a>
+                        <a class="nav-item nav-link" href="./post">New Post</a>
+                        <a class="nav-item nav-link" href="./login">Login</a>
                     </div>
                 </div>
             </nav>
         </header>
         <main class="container-fluid mt-5">
             {{{body}}}
+            {{!-- <p>HELLO WORLD</p> --}}
         </main>
         <footer>
 
