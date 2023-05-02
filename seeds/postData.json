@@ -118,6 +118,29 @@
         "description": "Cliveden Manor, also known as the Chew House, is said to be haunted by the owners, the Chew family.",
         "date_created": "5/01/2023",
         "user_id": 15
+    },
+    {
+        "id": 16,
+        "city": "Austin",
+        "state": "Texas",
+        "description": "Driskill Hotel, is said to be haunted by numerous ghosts including a child who died after a tragic accident in the hotel.",
+        "date_created": "5/01/2023",
+        "user_id": 16
+    },
+    {
+        "id": 17,
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "description": "Alfred McCune Home, said to be haunted by the original owners of the home.",
+        "date_created": "5/01/2023",
+        "user_id": 17
+    },
+    {
+        "id": 18,
+        "city": "Seattle",
+        "state": "Washington",
+        "description": "Ye College Inn, is said to be haunted by howard a beer-drinking ghost who habitually wears a tan trench coat.", 
+        "date_created": "5/01/2023",
+        "user_id": 18
     }
-    
 ]
