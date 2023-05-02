@@ -11,7 +11,11 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    state: {
       type: DataTypes.STRING,
       allowNull: false,
     },
