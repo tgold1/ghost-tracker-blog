@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+	    "city": "Savannah",
+	    "state": "Georgia",
+        "description": "Moon River Brewing Company, the building is said to be haunted by angry spirits. Among them is a lady in white and James Stark, a known gambler who was killed in the building in an altercation.",
+        "date_created": "5/01/2023",
+        "user_id": 1
+    },
+    {
+        "id": 2,
+        "city": "Aspen",
+        "state": "Colorado",
+        "description": "Pioneer Park, haunted by the ghost of Harriet Webber, wife of the builder of the park.",
+        "date_created": "5/01/2023",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "description": "Monte Vista Hotel, a phantom bellboy is said to knock on the door of room 210 and announce room service.",
+        "date_created": "5/01/2023",
+        "user_id": 3
+    },
+    {
+        "id": 4,
+        "city": "Oxnard",
+        "state": "California",
+        "description": "Henry Levy House, the house is filmed with a locked door flying open and is believed to be the ghosts of previous owners Henry and Camille Levy who died in the house.",
+        "date_created": "5/01/2023",
+        "user_id": 4
+    },
+    {
+        "id": 5,
+        "city": "St. Augustine",
+        "state": "Florida",
+        "description": "Pedro Benedit Horruytiner house, the ghost of Pedro Benedit and a cat who once lived there haunt the house.",
+        "date_created": "5/01/2023",
+        "user_id": 5
+    },
+    {
+        "id": 6,
+        "city": "Chicago",
+        "state": "Illinois",
+        "description": "Hull House, the wife of Charles Hull the original owner is said to haunt the attic of the house.",
+        "date_created": "5/01/2023",
+        "user_id": 6
+    },
+    {
+        "id": 7,
+        "city": "Cumberland",
+        "state": "Maryland",
+        "description": "Chesapeake and Ohio Canal, haunted by the ghosts of soldiers who fought in the Civil War.", 
+        "date_created": "5/01/2023",
+        "user_id": 7
+    },
+    {
+        "id": 8,
+        "city": "Marquette",
+        "state": "Michigan",
+        "description": "Landmark Inn, a room is haunted by a librarian who lost her lover in a shipwreck.", 
+        "date_created": "5/01/2023",
+        "user_id": 8
+    },
+    {
+        "id": 9,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "description": "1st Avenue, haunted by a woman who died during World War II.",
+        "date_created": "5/01/2023",
+        "user_id": 9
+    },
+    {
+        "id": 10,
+        "city": "Cape May",
+        "state": "NJ",
+        "description": "Emlen Physick Estate, haunted by the original owner and his family.",
+        "date_created": "5/01/2023",
+        "user_id": 10
+    },
+    {
+        "id": 11,
+        "city": "Albany",
+        "state": "New York",
+        "description": "New York State Capitol building, haunted by the ghosts of a night watchman who died in a 1911 fire.",
+        "date_created": "5/01/2023",
+        "user_id": 11
+    },
+    {
+        "id": 12,
+        "city": "Fayetteville",
+        "state": "North Carolina",
+        "description": "Sandford House, haunted by the lady in the black who recently has been sighted by members of the womans club of Fayetteville.",
+        "date_created": "5/01/2023",
+        "user_id": 12
+    },
+    {
+        "id": 13,
+        "city": "Cincinnati",
+        "state": "Ohio",
+        "description": "Cincinnati Music Hall, haunted by ghosts as early as 1876 and bones of people were found during an installation of an elevator shaft in 1988.",
+        "date_created": "5/01/2023",
+        "user_id": 13
+    },
+    {
+        "id": 14,
+        "city": "Portland",
+        "state": "Oregon",
+        "description": "Pittock Mansion, a mansion overlooking the city is said to be haunted by the original owner and his family.", 
+        "date_created": "5/01/2023",
+        "user_id": 14
+    },
+    {
+        "id": 15,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "description": "Cliveden Manor, also known as the Chew House, is said to be haunted by the owners, the Chew family.",
+        "date_created": "5/01/2023",
+        "user_id": 15
+    },
+    {
+        "id": 16,
+        "city": "Austin",
+        "state": "Texas",
+        "description": "Driskill Hotel, is said to be haunted by numerous ghosts including a child who died after a tragic accident in the hotel.",
+        "date_created": "5/01/2023",
+        "user_id": 16
+    },
+    {
+        "id": 17,
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "description": "Alfred McCune Home, said to be haunted by the original owners of the home.",
+        "date_created": "5/01/2023",
+        "user_id": 17
+    },
+    {
+        "id": 18,
+        "city": "Seattle",
+        "state": "Washington",
+        "description": "Ye College Inn, is said to be haunted by howard a beer-drinking ghost who habitually wears a tan trench coat.", 
+        "date_created": "5/01/2023",
+        "user_id": 18
+    }
+]
