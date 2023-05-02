@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS ghosts_db;
+CREATE DATABASE ghosts_db;
