@@ -21,7 +21,12 @@
     <div class="topnav">
         <a href="/">Home</a>
         <a href="/post">New Post</a>
+         {{#if logged_in}}
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
         <a href="/login">Login</a>
+        {{/if}}
+        {{!-- <a href="/login">Login</a> --}}
     </div>
     <div class="flex-column">
         
