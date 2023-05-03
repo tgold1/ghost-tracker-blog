@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghost Tracker</title>
     <link rel="stylesheet" href="/css/jass.css">
-    {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
+    {{!--
+    <link rel="stylesheet" href="/css/style.css"> --}}
 </head>
 
 <body>
@@ -16,7 +17,7 @@
                 <a class="navbar-brand" href="#">Ghost Tracker</a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="/homepage">Home <span class="sr-only"></span></a>
+                        <a class="nav-item nav-link" href="/">Home <span class="sr-only"></span></a>
                         <a class="nav-item nav-link" href="/post">New Post</a>
                         <a class="nav-item nav-link" href="/login">Login</a>
                     </div>
@@ -26,10 +27,15 @@
         <main class="container-fluid mt-5">
             {{{body}}}
         </main>
+       
         <footer>
 
         </footer>
     </div>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
 </body>
 
 </html>
