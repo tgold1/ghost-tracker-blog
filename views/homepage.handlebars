@@ -5,7 +5,7 @@
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       <a href="/post/{{post.id}}">{{post.name}}</a>
     </h2>
-      <!-- Pass needed_funding value to the helper function -->
+    <!-- Pass needed_funding value to the helper function -->
 
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
@@ -16,7 +16,11 @@
   </div>
 </div>
 <div class="row mb-4 post">
-    <a class="btn btn-primary" href="#post" role="button">Comment</a>
+  <a class="btn btn-primary" href="/post" role="button">Comment</a>
 </div>
 {{/each}}
+
+<section>
+  {{! space to add map}}
+</section>
 <p>HELLO WORLD</p>
