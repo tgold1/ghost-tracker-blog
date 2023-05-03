@@ -97,7 +97,7 @@ map.on('load', () => {
                     'properties': {
                         'description':
                             '<strong>Chesapeake and Ohio Canal</strong><p>target="_blank" title="Opens in a new window">Scary Waters</a>Chesapeake and Ohio Canal, haunted by the ghosts of soldiers who fought in the Civil War.</p>',
-                        'icon': 'music'
+                        'icon': 'ghost'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -108,24 +108,36 @@ map.on('load', () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>A Little Night Music</strong><p>The Arlington Players\' production of Stephen Sondheim\'s  <a href="http://www.thearlingtonplayers.org/drupal-6.20/node/4661/show" target="_blank" title="Opens in a new window"><em>A Little Night Music</em></a> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>',
-                        'icon': 'music'
+                            '<strong>Landmark Inn</strong><p> target="_blank" title="Opens in a new window">Book Shelf Boo</a> Landmark Inn, a room is haunted by a librarian who lost her lover in a shipwreck</p>',
+                        'icon': 'ghost'
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-77.020945, 38.878241]
+                        'coordinates': [46.544817, -87.392310]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Truckeroo</strong><p><a href="http://www.truckeroodc.com/www/" target="_blank">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>',
-                        'icon': 'music'
+                            '<strong>1st Avenue</strong><p target="_blank">Traffic Light Scary</a>1st Avenue, haunted by a woman who died during World War II.</p>',
+                        'icon': 'ghost'
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-77.007481, 38.876516]
+                        'coordinates': [44.969411, -93.276465]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description':
+                            '<strong>Emlen Physick Estate</strong><p target="_blank">Ghost Estate</a>haunted by the original owner and his family</p>',
+                        'icon': 'ghost'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [38.940461, -74.915233]
                     }
                 }
             ]
