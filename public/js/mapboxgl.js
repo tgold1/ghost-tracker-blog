@@ -84,24 +84,24 @@ map.on('load', () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Capital Pride Parade</strong><p>The annual <a href="http://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>',
-                        'icon': 'rocket'
+                            '<strong>Hull House</strong><p><a target="_blank" title="Opens in a new window">Haunted Hull House</a> Hull House, the wife of Charles Hull the original owner is said to haunt the attic of the house.</p>',
+                        'icon': 'ghost'
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-77.043444, 38.909664]
+                        'coordinates': [41.871607, -87.647144]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist <a href="http://www.muhsinah.com" target="_blank" title="Opens in a new window">Muhsinah</a> plays the <a href="http://www.blackcatdc.com">Black Cat</a> (1811 14th Street NW) tonight with <a href="http://www.exitclov.com" target="_blank" title="Opens in a new window">Exit Clov</a> and <a href="http://godsilla.bandcamp.com" target="_blank" title="Opens in a new window">Gods’illa</a>. 9:00 p.m. $12.</p>',
+                            '<strong>Chesapeake and Ohio Canal</strong><p>target="_blank" title="Opens in a new window">Scary Waters</a>Chesapeake and Ohio Canal, haunted by the ghosts of soldiers who fought in the Civil War.</p>',
                         'icon': 'music'
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-77.031706, 38.914581]
+                        'coordinates': [39.625966, -78.757423]
                     }
                 },
                 {
