@@ -2,32 +2,32 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  try {
-    // const postData = await Post.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
+// router.get('/', async (req, res) => {
+//   try {
+//     // const postData = await Post.findAll({
+//     //   include: [
+//     //     {
+//     //       model: User,
+//     //       attributes: ['name'],
+//     //     },
+//     //   ],
+//     // });
 
     
-    // const posts = postData.map((post) => this.post.get({ plain: true }));
+//     // const posts = postData.map((post) => this.post.get({ plain: true }));
 
 
-    res.render('homepage', { 
-      // layout: "homepage",
-      // posts, 
-      // logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('homepage', { 
+//       // layout: "homepage",
+//       // posts, 
+//       // logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-// router.get('/post/:id', async (req, res) => {
+// router.get('/posts/:id', async (req, res) => {
 //   try {
 //     const postData = await this.post.findByPk(req.params.id, {
 //       include: [
@@ -50,19 +50,24 @@ router.get('/', async (req, res) => {
 // });
 
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
+    // Get all posts and JOIN with user data
+    const postData = await Post.findAll({
+      attributes: ['id', 'title', 'description', 'date_created'],
+      include: 
+        {
+          model: User,
+          attributes: ['user_name'],
+        },
     });
-
-    const user = userData.get({ plain: true });
-
-    res.render('profile', {
-      ...user,
-      logged_in: true
+    // Serialize data so the template can read it
+    const post = postData.map((post) => post.get({ plain: true }));
+    
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      post,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -72,7 +77,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   
   if (req.session.logged_in) {
-    res.redirect('/login');
+    res.redirect('/');
     return;
   }
 
