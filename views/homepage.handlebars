@@ -20,7 +20,19 @@
 </div>
 {{/each}}
 
-<section>
+<section id="Mapbox_Ghostmap">
   {{! space to add map}}
+  
+
+
 </section>
+<script>
+    var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
+    var map = new mapboxgl.Map({
+      container: 'Mapbox_Ghostmap',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
 <p>HELLO WORLD</p>
