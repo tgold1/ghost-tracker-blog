@@ -1,42 +1,42 @@
 [
     {
-	    "username": "ghosttracker13",
+	    "user_name": "ghosttracker13",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosttracker24",
+	    "user_name": "ghosttracker24",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosttracker76",
+	    "user_name": "ghosttracker76",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosttracker88",
+	    "user_name": "ghosttracker88",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosttracker95",
+	    "user_name": "ghosttracker95",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosthunter83",
+	    "user_name": "ghosthunter83",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosthunter75",
+	    "user_name": "ghosthunter75",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghosthunter54",
+	    "user_name": "ghosthunter54",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghostwatcher44",
+	    "user_name": "ghostwatcher44",
 	    "password": "pass12345"
     },
     {
-	    "username": "ghostwatcher22",
+	    "user_name": "ghostwatcher22",
 	    "password": "pass12345"
     }
 ]
