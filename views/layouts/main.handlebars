@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghost Tracker</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/jass.css"> 
 </head>
 
 <body>
-    <div class="flex-column">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Ghost Tracker</a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="/homepage">Home <span class="sr-only"></span></a>
-                        <a class="nav-item nav-link" href="/post">New Post</a>
-                        <a class="nav-item nav-link" href="/login">Login</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <div class="header">
+        <h1>Ghost Tracker</h1>
+            <p>What did the ghost buy at the bar? Boos!</p>
+    </div>
+    <div class="topnav">
+        <a href="/homepage">Home</a>
+        <a href="/post">New Post</a>
+        <a href="/login">Login</a>
+    </div>
+                
+        
+        
         <main class="container-fluid mt-5">
             {{{body}}}
         </main>
