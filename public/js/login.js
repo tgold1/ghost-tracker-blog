@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -25,17 +25,17 @@ const signupFormHandler = async function (event) {
   const usernameEl = document.querySelector('#name-signup');
   const passwordEl = document.querySelector('#password-signup');
 
-  const response = await fetch('/api/user', {
+  const response = await fetch('/api/users', {
     method: 'POST',
     body: JSON.stringify({
-      username: usernameEl.value,
+      user_name: usernameEl.value,
       password: passwordEl.value,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/');
   } else {
     alert('Failed to sign up');
   }
