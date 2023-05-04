@@ -10,7 +10,9 @@ To use this app you will need to access it in the browser via the deployed link.
 
 ## Credits
 
-N/A
+tgold1
+CrowTrooper202
+dannydelts94
 
 ## License
 
