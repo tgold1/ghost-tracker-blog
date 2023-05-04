@@ -1,14 +1,7 @@
-var APIKey = "1a6e242c584145cebf5c8827e5e6e268";
+var apiKey = "1a6e242c584145cebf5c8827e5e6e268";
 var mapKey = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg'
-//var mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
-const map = new mapboxgl.Map({
-    container: 'map',
-    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-99, 32],
-    zoom: 11.15
-});
 
+const cityName = "Savannah"
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
     .then(function (response) {
         return response.json();
@@ -16,7 +9,14 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
     .then(function (response) {
         var cityLon = response.coord.lon;
         var cityLat = response.coord.lat;
-
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [cityLon, cityLat],
+            zoom: 11.15
+        });
 
         map.on('load', () => {
             map.addSource('places', {
@@ -32,7 +32,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
                             'properties': {
                                 'description':
                                     '<strong>MoonRiverBrewingCompany</strong><p><a target="_blank" title="Opens in a new window">Ghost Brewing</a> Moon River Brewing Company, the building is said to be haunted by angry spirits. Among them is a lady in white and James Stark, a known gambler who was killed in the building in an altercation.</p>',
-                                'icon': 'ghost'
+                                'icon': 'http://clipart-library.com/img/825036.png'
                             },
                             'geometry': {
                                 'type': 'Point',
@@ -57,33 +57,33 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
             }
         });
 
-        // When a click event occurs on a feature in the places layer, open a popup at the
-        // location of the feature, with description HTML from its properties.
-        // map.on('click', 'places', (e) => {
-        //     // Copy coordinates array.
-        //     const coordinates = e.features[0].geometry.coordinates.slice();
-        //     const description = e.features[0].properties.description;
+    //    When a click event occurs on a feature in the places layer, open a popup at the
+    //     location of the feature, with description HTML from its properties .
+        map.on('click', 'places', (e) => {
+            // Copy coordinates array.
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
 
-        //     // Ensure that if the map is zoomed out such that multiple
-        //     // copies of the feature are visible, the popup appears
-        //     // over the copy being pointed to.
-        //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        //         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        //     }
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-        //     new mapboxgl.Popup()
-        //         .setLngLat(coordinates)
-        //         .setHTML(description)
-        //         .addTo(map);
-        // });
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
 
-        // // Change the cursor to a pointer when the mouse is over the places layer.
-        // map.on('mouseenter', 'places', () => {
-        //     map.getCanvas().style.cursor = 'pointer';
-        // });
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
 
-        // // Change it back to a pointer when it leaves.
-        // map.on('mouseleave', 'places', () => {
-        //     map.getCanvas().style.cursor = '';
-        // });
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', () => {
+            map.getCanvas().style.cursor = '';
+        });
     });
