@@ -56,11 +56,11 @@ body {
 }
 
 #map {
-  position: absolute;
-
+  position: relative;
+  left: 30 px;
   bottom: 0;
   width: 75%;
-  height: 200px;
+  height: 400px;
 }
 
 .mapboxgl-popup {
