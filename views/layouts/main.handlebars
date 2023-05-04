@@ -6,46 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghost Tracker</title>
 
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="/css/jass.css"> 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
-    
+
 </head>
 
 <body>
     <div class="hero-image">
-  <div class="hero-text">
-    <h1>Ghost Tracker</h1>
-    <p>What did the ghost buy at the bar? Boos!</p>
-  </div>
-</div>
+        <div class="hero-text">
+            <h1>Ghost Tracker</h1>
+            <p>What did the ghost buy at the bar? Boos!</p>
+        </div>
+    </div>
     <div class="topnav">
         <a href="/">Home</a>
         <a href="/post">New Post</a>
         <a href="/profile">Profile</a>
-         {{#if logged_in}}
+        {{#if logged_in}}
         <a href="/login" id="logout">Logout</a>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
-        
+
     </div>
 
-                
-        
-       
-  
+
+
+
+
 
 
 
 
 
     <div class="flex-column">
-        
+
         <main class="container-fluid mt-5">
             {{{body}}}
         </main>
-       
+
         <footer>
 
         </footer>
