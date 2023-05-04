@@ -49,3 +49,21 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+
+  bottom: 0;
+  width: 75%;
+  height: 200px;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

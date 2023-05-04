@@ -1,8 +1,8 @@
 var apiKey = "1a6e242c584145cebf5c8827e5e6e268";
 var mapKey = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg'
 
-const cityName = "Savannah"
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=Savannah&appid=${apiKey}`)
     .then(function (response) {
         return response.json();
     })
@@ -18,51 +18,51 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
             zoom: 11.15
         });
 
-        // for (const feature of geojson.features) {
-        //     // create a HTML element for each feature
-        //     const el = document.createElement('div');
-        //     el.className = 'marker';
-          
-        //     // make a marker for each feature and add to the map
-        //     new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
-        //   }
+        const geojson = {
+            'type': 'FeatureCollection',
+            'features': [
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [cityLon, cityLat]
+                    },
+                    'properties': {
+                        'title': 'Mapbox',
+                        'description': 'Savannah'
+                    }
+                },
+              
+            ]
+        };
 
+       
 
-        map.on('load', () => {
-            map.addSource('places', {
-                // This GeoJSON contains features that include an "icon"
-                // property. The value of the "icon" property corresponds
-                // to an image in the Mapbox Streets style's sprite.
-                'type': 'geojson',
-                'data': {
-                    'type': 'FeatureCollection',
-                    'features': [
-                        {
-                            'type': 'Feature',
-                            'properties': {
-                                'description':
-                                    '<strong>MoonRiverBrewingCompany</strong><p><a target="_blank" title="Opens in a new window">Ghost Brewing</a> Moon River Brewing Company, the building is said to be haunted by angry spirits. Among them is a lady in white and James Stark, a known gambler who was killed in the building in an altercation.</p>',
-                                'icon': 'http://clipart-library.com/img/825036.png'
-                            },
-                            'geometry': {
-                                'type': 'Point',
-                                'coordinates': [cityLon, cityLat]
-                            }
-                        },
-
-                    ]
-                    
-                }
-            });
-        });
+        // add markers to map
         for (const feature of geojson.features) {
             // create a HTML element for each feature
-            const el=document.createElement('div');
-            el.className='marker';
+            const el = document.createElement('div');
+            el.className = 'marker';
 
-            // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+            // make a marker for each feature and add it to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                        .setHTML(
+                            `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                        )
+                )
+                .addTo(map);
         }
+        // for (const feature of geojson.features) {
+        //     // create a HTML element for each feature
+        //     const el=document.createElement('div');
+        //     el.className='marker';
+
+        //     // make a marker for each feature and add to the map
+        //     new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+        // }
         console.log(cityLon)
         console.log(cityLat)
         // Add a layer showing the places.
@@ -76,8 +76,8 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
             }
         });
 
-    //    When a click event occurs on a feature in the places layer, open a popup at the
-    //     location of the feature, with description HTML from its properties .
+        //    When a click event occurs on a feature in the places layer, open a popup at the
+        //     location of the feature, with description HTML from its properties .
         map.on('click', 'places', (e) => {
             // Copy coordinates array.
             const coordinates = e.features[0].geometry.coordinates.slice();
