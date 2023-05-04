@@ -1,12 +1,21 @@
-
-mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
+var APIKey = "1a6e242c584145cebf5c8827e5e6e268";
+var mapKey = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg'
+//var mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
 const map = new mapboxgl.Map({
-    container: 'Mapbox_Ghostmap',
+    container: 'map',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/streets-v12',
     center: [-99, 32],
     zoom: 11.15
 });
+
+fetch(https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey})
+        .then(function (response) {
+            return response.json();
+        })
+            .then(function (response) {
+                var cityLon = response.coord.lon;
+                var cityLat = response.coord.lat;
 
 map.on('load', () => {
     map.addSource('places', {
@@ -26,7 +35,7 @@ map.on('load', () => {
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-81, 32]
+                        'coordinates': [cityLon, cityLat]
                     }
                 },
             
