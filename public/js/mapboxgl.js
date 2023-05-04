@@ -1,3 +1,11 @@
+const Post = require('../models');
+var geo = require('mapbox-geocoding')
+geo.setAccessToken('pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg');
+
+geo.geocode('mapbox.places', `${post.city}, ${post.state}`, function (err, geoData) {
+    console.log(geoData);
+});
+
 mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
 const map = new mapboxgl.Map({
     container: 'map',
@@ -49,9 +57,7 @@ map.on('load', () => {
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [35.198080, -111.647427
-
-]
+                        'coordinates': [35.198080, -111.647427]
                     }
                 },
                 {
@@ -63,9 +69,7 @@ map.on('load', () => {
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [34.202060, -119.186602
-
-]
+                        'coordinates': [34.202060, -119.186602]
                     }
                 },
                 {
