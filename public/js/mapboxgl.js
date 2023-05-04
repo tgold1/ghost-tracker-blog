@@ -18,6 +18,16 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
             zoom: 11.15
         });
 
+        // for (const feature of geojson.features) {
+        //     // create a HTML element for each feature
+        //     const el = document.createElement('div');
+        //     el.className = 'marker';
+          
+        //     // make a marker for each feature and add to the map
+        //     new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+        //   }
+
+
         map.on('load', () => {
             map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
@@ -41,6 +51,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api
                         },
 
                     ]
+                    
                 }
             });
         });
