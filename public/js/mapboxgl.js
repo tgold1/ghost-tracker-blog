@@ -2,11 +2,17 @@ var apiKey = "1a6e242c584145cebf5c8827e5e6e268";
 var mapKey = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg'
 
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=Savannah&appid=${apiKey}`)
+const postClickHandler = function(event){
+    const city = event.target.text
+    console.log(city);
+//     const city= document.querySelector('input[name="postCity"]').value
+// console.log(city);
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
     .then(function (response) {
         return response.json();
     })
     .then(function (response) {
+        console.log(response);
         var cityLon = response.coord.lon;
         var cityLat = response.coord.lat;
         mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
@@ -104,3 +110,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=Savannah&appid=${apiKey
             map.getCanvas().style.cursor = '';
         });
     });
+}
+
+document.querySelector('#postTitle').addEventListener("click", postClickHandler)
