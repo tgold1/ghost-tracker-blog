@@ -27,8 +27,15 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/post', async (req, res)=>{
-  if (req.session.logged_in){
+  // if (req.session.logged_in){
     res.render('post')
+  // }
+  // res.render('login')
+})
+
+router.get('/profile', async (req, res)=>{
+  if (req.session.logged_in){
+    res.render('profile')
   }
   res.render('login')
 })
