@@ -3,11 +3,7 @@
   <div class="col-md-5">
 
     <h2 class="text-center">
-      <a href="/post/{{this.id}}">{{this.title}}</a>
-
-    <h2>
      {{this.title}}
-
     </h2>
    
     <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
@@ -19,11 +15,7 @@
   </div>
   
 </div>
-<div class="container align-items-center mb-4">
-<div class="d-flex justify-content-center ml-5">
-  <a class="btn btn-primary" href="/post" role="button">Comment</a>
-</div>
-</div>
+
 {{/each}}
 
 <div id="map"></div>
