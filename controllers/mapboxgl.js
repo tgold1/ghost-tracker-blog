@@ -8,7 +8,7 @@ geo.geocode('mapbox.places', `${post.city}, ${post.state}`, function (err, geoDa
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
 const map = new mapboxgl.Map({
-    container: 'map',
+    container: 'Mapbox_Ghostmap',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/streets-v12',
     center: [39.645891, -99.311362],
