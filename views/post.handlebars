@@ -1,19 +1,21 @@
-<form>
+<form class="new-post-form">
     <div class="form-group">
         <label for="exampleFormControlInput1">Title</label>
-        <input type="Title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+        <input type="Title" class="form-control" id="post-title" placeholder="Title">
     </div>
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Post</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="post-desc" rows="3"></textarea>
     </div>
     <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Gettysburg" name="City">
+      <input type="text" class="form-control" id= "post-city" placeholder="Gettysburg" name="City">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Pennsylvania" name="State">
+      <input type="text" class="form-control" id="post-state" placeholder="Pennsylvania" name="State">
     </div>
   </div>
     <input class="btn btn-primary btn-lg" type="submit" value="Submit">
 </form>
+
+<script src="/js/post.js"></script>

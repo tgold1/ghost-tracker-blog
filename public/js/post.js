@@ -1,6 +1,6 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-  
+  console.log('hello wolrd');
     const title = document.querySelector('#post-title').value.trim();
     const city = document.querySelector('#post-city').value.trim();
     const state = document.querySelector('#post-state').value.trim()
@@ -43,6 +43,6 @@ const newFormHandler = async (event) => {
     .querySelector('.new-post-form')
     .addEventListener('submit', newFormHandler);
   
-  document
-    .querySelector('.post-list')
-    .addEventListener('click', delButtonHandler);
+  // document
+  //   .querySelector('.post-list')
+  //   .addEventListener('click', delButtonHandler);
