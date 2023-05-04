@@ -26,19 +26,6 @@
 </div>
 {{/each}}
 
-<section id="Mapbox_Ghostmap">
-  {{! space to add map}}
-  
+<div id="map"></div>
 
-
-</section>
-<script>
-    var mapboxgl = require('controllers/api/mapboxgl.js');
-
-    mapboxgl.accessToken = 'pk.eyJ1IjoidGdvbGQxIiwiYSI6ImNsaDdzejVzNjAxdGYzam13MGkzOXpmdmsifQ.mTffg5HogZ3NwE5ibJzpIg';
-    var map = new mapboxgl.Map({
-      container: 'Mapbox_Ghostmap',
-      style: 'mapbox://styles/mapbox/streets-v11'
-    });
-  </script>
-
+<script src="/js/mapboxgl.js"></script>
