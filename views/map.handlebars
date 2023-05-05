@@ -1,0 +1,19 @@
+<div class="row mb-4 post pastPosts-{{this.id}}">
+  <div class="col-md-4">
+
+    <a href="/posts/{{id}}">
+    <h2 class="text-center" id="postTitle" value="{{this.city}}">{{this.title}}</h2>
+</a>
+  
+   
+    <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
+  </div>
+  <div class="col-md-4">
+    <p class="text-center">
+      {{this.description}}
+    </p>
+    <input type="hidden" name="postCity" value="{{this.city}}">
+  </div>
+  
+  <div class="col-md-4 map-{{this.id}}"></div>
+</div>

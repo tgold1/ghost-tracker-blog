@@ -59,9 +59,10 @@ body {
   position: relative;
   left: 30 px;
   bottom: 0;
-  width: 75%;
+  width: 100%;
   height: 400px;
 }
+
 
 .mapboxgl-popup {
   max-width: 400px;

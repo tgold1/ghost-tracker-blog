@@ -1,9 +1,8 @@
-{{#each post }}
-<section data-bs-spy="scroll" data-bs-target=".post" data-bs-offset="50">
+{{!-- {{#each post }}
 <div class="row mb-4 post" id="pastPosts">
   <div class="col-md-4">
 
-    <h2 class="text-center" id="postTitle">{{this.title}}</h2>
+    <h2 class="text-center" id="postTitle" value="{{this.city}}">{{this.title}}</h2>
   
    
     <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
@@ -17,10 +16,31 @@
   
   <div class="col-md-4" id="map"></div>
 </div>
-</section>
 
 {{/each}}
+ --}}
 
-{{!-- <div id="map"></div> --}}
+{{#each post }}
+<div class="row mb-4 post pastPosts-{{this.id}}">
+  <div class="col-md-4">
+
+    <a href="/posts/{{id}}">
+    <h2 class="text-center" id="postTitle" value="{{this.city}}">{{this.title}}</h2>
+</a>
+  
+   
+    <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
+  </div>
+  <div class="col-md-4">
+    <p class="text-center">
+      {{this.description}}
+    </p>
+    <input type="hidden" name="postCity" value="{{this.city}}">
+  </div>
+  
+  <div class="col-md-4 map-{{this.id}}"></div>
+</div>
+
+{{/each}}
 
 <script src="/js/mapboxgl.js"></script>

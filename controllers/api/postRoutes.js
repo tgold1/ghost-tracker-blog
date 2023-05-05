@@ -44,7 +44,7 @@ router.get('/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
     if (!postData) {
-      res.status(404).json({ message: 'No category with this id!' });
+      res.status(404).json({ message: 'No post with this id!' });
       return;
     }
     res.status(200).json(postData);
