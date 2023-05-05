@@ -26,15 +26,16 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post:id', async (req, res)=>{
+router.get('/posts/:id', async (req, res)=>{
   try{
-    const postData = await Post.findOne(req.params.id);
+    const postData = await Post.findByPk(req.params.id);
 
-    const map = postData
+    const map = postData.get({plain:true})
     res.render('map',{
       ... map
     })
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 })
