@@ -1,29 +1,48 @@
-{{#each post }}
-<div class="row mb-4 post">
-  <div class="col-md-5">
+{{!-- {{#each post }}
+<div class="row mb-4 post" id="pastPosts">
+  <div class="col-md-4">
 
-    <h2 class="text-center">
- 
-     {{this.title}}
-
-    </h2>
+    <h2 class="text-center" id="postTitle" value="{{this.city}}">{{this.title}}</h2>
+  
    
     <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-4">
     <p class="text-center">
       {{this.description}}
     </p>
+    <input type="hidden" name="postCity" value="{{this.city}}">
   </div>
   
+  <div class="col-md-4" id="map"></div>
 </div>
-<div class="container align-items-center mb-4">
-<div class="d-flex justify-content-center ml-5">
-  <a class="btn btn-primary" href="/post" role="button">Comment</a>
+
+{{/each}}
+ --}}
+
+{{#each post }}
+<div class="row mb-4 post pastPosts-{{this.id}}">
+  <div class="col-md-4">
+
+    <a href="/posts/{{id}}">
+    <h2 class="text-center" id="postTitle" value="{{this.city}}">{{this.title}}</h2>
+</a>
+  
+   
+    <p class="text-center">Created by {{this.user.user_name}} on {{ format_date this.date_created}}</p>
+  </div>
+  <div class="col-md-4">
+    <p class="text-center">
+      {{this.description}}
+    </p>
+    <input type="hidden" name="postCity" value="{{this.city}}">
+  </div>
+  
+  <div class="col-md-4" id="map"></div>
 </div>
-</div>
+
 {{/each}}
 
-<div id="map"></div>
+
 
 <script src="/js/mapboxgl.js"></script>

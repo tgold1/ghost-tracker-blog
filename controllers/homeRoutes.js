@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
-      attributes: ['id', 'title', 'description', 'date_created'],
+      attributes: ['id', 'title', 'description', 'date_created', 'city'],
       include: 
         {
           model: User,
@@ -26,19 +26,40 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post', async (req, res)=>{
-  if (req.session.logged_in){
-    res.render('post')
+router.get('/posts/:id', async (req, res)=>{
+  try{
+    const postData = await Post.findByPk(req.params.id);
+
+    const map = postData.get({plain:true})
+    res.render('map',{
+      ... map
+    })
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
-  res.render('login')
 })
 
-router.get('/profile', async (req, res)=>{
-  if (req.session.logged_in){
-    res.render('profile')
+
+
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Post }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render('login')
-})
+});
 
 router.get('/login', (req, res) => {
   

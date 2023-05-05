@@ -28,7 +28,6 @@
     </div>
     <div class="topnav">
         <a href="/">Home</a>
-        <a href="/post">New Post</a>
         <a href="/profile">Profile</a>
         {{#if logged_in}}
         <a href="/login" id="logout">Logout</a>
@@ -38,18 +37,9 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
     <div class="flex-column">
 
-        <main class="container-fluid mt-5">
+        <main class="container-fluid mt-5" id="starter">
             {{{body}}}
         </main>
 
@@ -64,3 +54,4 @@
 </body>
 <script src="/js/mapboxgl.js"></script>
 </html>
+
