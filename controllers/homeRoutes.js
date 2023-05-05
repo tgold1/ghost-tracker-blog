@@ -26,12 +26,20 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/post', async (req, res)=>{
-//   if (req.session.logged_in){
-//     res.render('post')
-//   }
-//   res.render('login')
-// })
+router.get('/post:id', async (req, res)=>{
+  try{
+    const postData = await Post.findOne(req.params.id);
+
+    const map = postData
+    res.render('map',{
+      ... map
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
