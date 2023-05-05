@@ -19,3 +19,7 @@ dannydelts94
 MIT
 
 ## Deployed Link and Screenshot
+
+The heroku link: https://quiet-wave-19391.herokuapp.com/
+
+![Alt text](./assets/images/screenshot.png)
